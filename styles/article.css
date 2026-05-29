@@ -804,7 +804,7 @@ body {
 
 .footer .footer__contacts p a:hover { text-decoration: underline; }
 
-@media (min-width: 1264px) {
+@media (min-width: 1260px) {
     .header { padding-inline: 0; }
     .nav { padding-left: 5px; padding-right: 0; }
     .header__content, .main-container, .footer { padding-inline: 0; }
@@ -821,5 +821,110 @@ body {
 
     .main-container__item { margin-top: 6px; }
     .main-container__image { margin-top: 16px; }
+    .main-container__card-primary-image { width: 175px; height: 146px; }
+    .main-container__card-primary { padding: 24px 20px; }
+    .main-container__card-secondary { padding: 24px; }
+    .main-container__card-secondary-body ul { padding-left: 23px; }
+    .main-container__card-image { margin-bottom: 0; }
+    .main-container__card-tertiary { padding: 23px; }
+    .sublist1 { display: none; }
+    .list { margin: 0; }
+    .main-container__note { margin-top: 24px; }
+    .main-container__request { display: none; }
+    .main-container__tags { display: none; }
 
-    .main-container__c
+    .footer { margin-top: 56px; padding: 40px 25px 0 38px; }
+    .footer .footer__sections { gap: 25px; }
+}
+
+@media (width <= 970px) {
+    .header__nav { display: none; }
+    .header__content { padding-inline: 19px; }
+    .header__button { display: none; }
+    .header__burger { display: inline-block; }
+}
+
+@media (width <= 760px) {
+    .nav { padding-inline: 22px; }
+
+    .main-container {
+        padding-inline: 21px;
+        grid-template-columns: 1fr;
+    }
+
+    .main-container__sidebar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px 16px;
+    }
+
+    .main-container__card-image { height: 240px; }
+    .main-container__card-tertiary { padding: 8px 23px; }
+
+    .main-container__card-primary-image {
+        width: 100%;
+        height: 206px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .main-container__card-secondary-content {
+        box-sizing: border-box;
+        padding: 0 27px;
+    }
+
+    .footer { margin-top: 43px; padding: 36px 25px 14px 20px; }
+    .footer .footer__sections { gap: 26px 31px; }
+}
+
+@media (width <= 560px) {
+    .main-container__sidebar,
+    .main-container__columns { grid-template-columns: 1fr; }
+}
+
+@media (width <= 430px) {
+    .footer .footer__section form { width: 100%; }
+}
+
+@media (width <= 420px) {
+    .header { height: 72px; }
+    .header__logo { width: 48px; height: 34px; margin-inline-start: 4px; }
+    .main-container__header { font-size: 32px; line-height: 40px; }
+    .main-container { padding: 13px 19px; margin-top: 0; }
+    .main-container__author { margin: 15px 0; }
+    .main-container__image { margin-top: 8px; height: 209px; }
+    .main-container__item { margin-top: 27px; }
+    .main-container__note { padding: 17px; background-position: 15px 15px; background-size: 33px; }
+    .main-container__statement { padding: 40px 0 0; }
+    .main-container__columns > img { width: 100%; height: 380px; }
+    .main-container__columns { gap: 16px; }
+    .main-container__exercise { padding: 17px; }
+    .main-container__item2 { gap: 19px; }
+    .main-container__card-primary { padding: 33px; }
+    .main-container__card-tertiary { padding: 22px; }
+    .footer { margin-top: 115px; padding-bottom: 30px; }
+    .footer .footer__contacts { flex-direction: column; gap: 5px; align-items: flex-start; }
+    .footer .footer__contacts p { margin: 8px 0; }
+    .footer .footer__section.footer__icons { gap: 30px; }
+}
+
+@media (width <= 320px) {
+    .header { height: 56px; }
+    .header__content { padding: 11px 15px; }
+    .header__logo { margin-inline-start: 0; margin-block-start: 0; }
+    .nav { padding: 25px 16px; }
+    .main-container__header { font-size: 24px; line-height: 24px; }
+    .main-container { padding: 1px 15px; gap: 14px; }
+    .main-container__subheader { font-size: 18px; line-height: 26px; }
+    .main-container__statement { padding: 5px 0 0; }
+    .main-container__item { margin-top: 0; }
+    .main-container__columns > div { gap: 10px; }
+    .main-container__sidebar { gap: 24px; }
+    .main-container__card-primary { padding: 24px; }
+    .main-container__card-secondary { padding: 30px 19px; }
+    .main-container__card-secondary-content { padding: 0; }
+    .main-container__card-tertiary { padding: 15px 18px; }
+    .footer { margin-top: 57px; padding-inline: 14px; }
+    .footer .footer__sections { gap: 17px; }
+    .footer .footer__section.footer__icons { gap: 20px; }
+}

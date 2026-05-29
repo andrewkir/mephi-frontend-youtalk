@@ -19,7 +19,7 @@
 <header class="header" role="banner">
     <div class="header__content max-width">
         <a href="#"><img class="header__logo" src="./images/logo.svg" alt="Логотип Youtalk"/></a>
-        <nav class="header__nav" aria-label="Основная навигация">
+        <nav class="header__nav" id="mobile-menu" aria-label="Основная навигация">
             <ul role="list">
                 <li><a href="#">О нас</a></li>
                 <li><a href="#">Тарифы</a></li>
@@ -34,7 +34,7 @@
             </ul>
         </nav>
         <a href="#" class="header__button">Подобрать психолога</a>
-        <button class="header__burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+        <button class="header__burger" id="burger-btn" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
             <img width="18" height="18" src="./images/icon-burger.svg" alt="Меню"/>
         </button>
     </div>
@@ -285,6 +285,14 @@
 </footer>
 
 <script>
+    const burger = document.getElementById('burger-btn');
+    const menu = document.getElementById('mobile-menu');
+    burger.addEventListener('click', () => {
+        const isOpen = menu.classList.toggle('header__nav--open');
+        burger.setAttribute('aria-expanded', isOpen);
+        burger.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+    });
+
     document.querySelectorAll('.filters-button').forEach(btn => {
         btn.addEventListener('click', () => {
             document.querySelectorAll('.filters-button').forEach(b => {
